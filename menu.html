@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Modern Restaurant Menu</title>
+
+    <!-- Bootstrap CSS -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+
+        body{
+            background:#fff8f0;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        /* Navbar */
+
+        .navbar{
+            background:#111;
+        }
+
+        .navbar-brand{
+            color:#ffcc00 !important;
+            font-size:32px;
+            font-weight:bold;
+        }
+
+        .nav-link{
+            color:white !important;
+            margin-left:15px;
+        }
+
+        .nav-link:hover{
+            color:#ffcc00 !important;
+        }
+
+        /* Hero Section */
+
+        .hero{
+            height:60vh;
+
+            background:
+            linear-gradient(rgba(0,0,0,0.6),
+            rgba(0,0,0,0.6)),
+            url('https://images.unsplash.com/photo-1504674900247-0877df9cc836');
+
+            background-size:cover;
+            background-position:center;
+
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            text-align:center;
+
+            color:white;
+        }
+
+        .hero h1{
+            font-size:70px;
+            font-weight:bold;
+        }
+
+        .hero p{
+            font-size:24px;
+        }
+
+        /* Section Title */
+
+        .section-title{
+            text-align:center;
+            color:#8b0000;
+            font-size:50px;
+            font-weight:bold;
+            margin-top:60px;
+            margin-bottom:40px;
+        }
+
+        /* Menu Box */
+
+        .menu-box{
+            background:white;
+            border-radius:20px;
+            padding:30px;
+            box-shadow:0px 5px 20px rgba(0,0,0,0.2);
+            margin-bottom:40px;
+        }
+
+        .category-title{
+            color:#ff512f;
+            font-size:35px;
+            font-weight:bold;
+            margin-bottom:25px;
+            border-bottom:3px solid #ff512f;
+            display:inline-block;
+            padding-bottom:8px;
+        }
+
+        .menu-item{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            border-bottom:1px solid #ddd;
+            padding:15px 0;
+        }
+
+        .menu-left{
+            display:flex;
+            align-items:center;
+        }
+
+        .menu-left img{
+            width:85px;
+            height:85px;
+            object-fit:cover;
+            border-radius:15px;
+            margin-right:15px;
+        }
+
+        .menu-left h4{
+            color:#8b0000;
+            font-weight:bold;
+        }
+
+        .menu-left p{
+            margin:0;
+            color:#666;
+        }
+
+        .price{
+            color:green;
+            font-size:22px;
+            font-weight:bold;
+        }
+
+        .btn-order{
+            background:linear-gradient(to right,#ff512f,#dd2476);
+            color:white;
+            border:none;
+            border-radius:30px;
+            padding:8px 18px;
+        }
+
+        .btn-order:hover{
+            transform:scale(1.05);
+        }
+
+        footer{
+            background:black;
+            color:white;
+            text-align:center;
+            padding:30px;
+            margin-top:50px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+    <nav class="navbar navbar-expand-lg">
+
+        <div class="container">
+
+            <a class="navbar-brand" href="#">
+                🍽 Food Paradise
+            </a>
+
+            <button class="navbar-toggler bg-light"
+            data-bs-toggle="collapse"
+            data-bs-target="#menu">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+                        <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./home.html">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./menu.html">Menu</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./about.html">About</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./locations.html">Locations</a>
+                    </li>
+                </ul>
+            </div>
+
+            
+        </div>
+
+    </nav>
+
+    <!-- Hero Section -->
+
+    <section class="hero">
+
+        <div>
+
+            <h1>Delicious Restaurant Menu</h1>
+
+            <p>
+                Veg • Non Veg • Starters • Desserts • Drinks
+            </p>
+
+        </div>
+
+    </section>
+
+    <div class="container">
+
+        <h1 class="section-title">
+            Our Special Menu
+        </h1>
+
+        <!-- VEG ITEMS -->
+
+        <div class="menu-box">
+
+            <h2 class="category-title">
+                🥗 Veg Items
+            </h2>
+
+            <!-- Veg 1 -->
+
+            <div class="menu-item">
+
+                <div class="menu-left">
+
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38">
+
+                    <div>
+                        <h4>Veg Pizza</h4>
+                        <p>Cheesy vegetable pizza</p>
+                    </div>
+
+                </div>
+
+                <div>
+                    <span class="price">₹299</span>
+                    <button class="btn btn-order ms-2">
+                        Order
+                    </button>
+                </div>
+
+            </div>
+
+            <!-- Veg 2 -->
+
+            <div class="menu-item">
+
+                <div class="menu-left">
+
+                    <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe">
+
+                    <div>
+                        <h4>Green Salad</h4>
+                        <p>Healthy vegetable salad</p>
+                    </div>
+
+                </div>
+
+                <div>
+                    <span class="price">₹149</span>
+                    <button class="btn btn-order ms-2">
+                        Order
+                    </button>
+                </div>
+
+            </div>
+
+            <!-- Veg 3 -->
+
+            <div class="menu-item">
+
+                <div class="menu-left">
+
+                    <img src="https://images.unsplash.com/photo-1604908176997-4319f7f2b0a2">
+
+                    <div>
+                        <h4>Paneer Tikka</h4>
+                        <p>Spicy grilled paneer cubes</p>
+                    </div>
+
+                </div>
+
+                <div>
+                    <span class="price">₹249</span>
+                    <button class="btn btn-order ms-2">
+                        Order
+                    </button>
+                </div>
+
+            </div>
+
+            <!-- Veg 4 -->
+
+            <div class="menu-item">
+
+                <div class="menu-left">
+
+                    <img src="https://images.unsplash.com/photo-1547592180-85f173990554">
+
+                    <div>
+                        <h4>Veg Fried Rice</h4>
+                        <p>Chinese style fried rice</p>
+                    </div>
+
+                </div>
+
+                <div>
+                    <span class="price">₹199</span>
+                    <button class="btn btn-order ms-2">
+                        Order
+                    </button>
+                </div>
+
+            </div>
+
+            <!-- Veg 5 -->
+
+            <div class="menu-item">
+
+                <div class="menu-left">
+
+                    <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd">
+
+                    <div>
+                        <h4>Veg Noodles</h4>
+                        <p>Hot and spicy noodles</p>
+                    </div>
+
+                </div>
+
+                <div>
+                    <span class="price">₹179</span>
+                    <button class="btn btn-order ms-2">
+                        Order
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- NON VEG ITEMS -->
+
+        <div class="menu-box">
+
+            <h2 class="category-title">
+                🍗 Non Veg Items
+            </h2>
+
+            <!-- Non Veg 1 -->
+
+            <div class="menu-item">
+
+                <div class="menu-left">
+
+                    <img src="https://images.unsplash.com/photo-1631515243349-e0cb75fb8d3a">
+
+                    <div>
+                        <h4>Chicken Biryani</h4>
+                        <p>Hyderabadi spicy biryani</p>
+                    </div>
+
+                </div>
+
+                <div>
+                    <span class="price">₹349</span>
+                    <button class="btn btn-order ms-2">
+                        Order
+                    </button>
+                </div>
+
+            </div>
+
+            <!-- Non Veg 2 -->
+
+            <div class="menu-item">
+
+                <div class="menu-left">
+
+                    <img src="https://images.unsplash.com/photo-1550547660-d9450f859349">
+
+                    <div>
+                        <h4>Chicken Burger</h4>
+                        <p>Double chicken burger</p>
+                    </div>
+
+                </div>
+
+                <div>
+                    <span class="price">₹249</span>
+                    <button class="btn btn-order ms-2">
+                        Order
+                    </button>
+                </div>
+
+            </div>
+
+            <!-- Non Veg 3 -->
+
+            <div class="menu-item">
+
+                <div class="menu-left">
+
+                    <img src="https://images.unsplash.com/photo-1585032226651-759b368d7246">
+
+                    <div>
+                        <h4>Chicken Wings</h4>
+                        <p>Crispy spicy wings</p>
+                    </div>
+
+                </div>
+
+                <div>
+                    <span class="price">₹299</span>
+                    <button class="btn btn-order ms-2">
+                        Order
+                    </button>
+                </div>
+
+            </div>
+
+            <!-- Non Veg 4 -->
+
+            <div class="menu-item">
+
+                <div class="menu-left">
+
+                    <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19">
+
+                    <div>
+                        <h4>Prawn Fry</h4>
+                        <p>Spicy seafood prawn fry</p>
+                    </div>
+
+                </div>
+
+                <div>
+                    <span class="price">₹399</span>
+                    <button class="btn btn-order ms-2">
+                        Order
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- ROTIS & PAROTTAS -->
+
+        <div class="menu-box">
+
+            <h2 class="category-title">
+                🫓 Rotis & Parottas
+            </h2>
+
+            <div class="menu-item">
+                <div class="menu-left">
+                    <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950">
+                    <div>
+                        <h4>Butter Naan</h4>
+                        <p>Soft butter naan</p>
+                    </div>
+                </div>
+                <div>
+                    <span class="price">₹49</span>
+                    <button class="btn btn-order ms-2">Order</button>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <div class="menu-left">
+                    <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19">
+                    <div>
+                        <h4>Parotta</h4>
+                        <p>Layered crispy parotta</p>
+                    </div>
+                </div>
+                <div>
+                    <span class="price">₹39</span>
+                    <button class="btn btn-order ms-2">Order</button>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- STARTERS -->
+
+        <div class="menu-box">
+
+            <h2 class="category-title">
+                🍟 Starters
+            </h2>
+
+            <div class="menu-item">
+                <div class="menu-left">
+                    <img src="https://images.unsplash.com/photo-1600891964092-4316c288032e">
+                    <div>
+                        <h4>French Fries</h4>
+                        <p>Crispy potato fries</p>
+                    </div>
+                </div>
+                <div>
+                    <span class="price">₹129</span>
+                    <button class="btn btn-order ms-2">Order</button>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <div class="menu-left">
+                    <img src="https://images.unsplash.com/photo-1562967916-eb82221dfb92">
+                    <div>
+                        <h4>Spring Rolls</h4>
+                        <p>Crispy vegetable rolls</p>
+                    </div>
+                </div>
+                <div>
+                    <span class="price">₹179</span>
+                    <button class="btn btn-order ms-2">Order</button>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- DESSERTS -->
+
+        <div class="menu-box">
+
+            <h2 class="category-title">
+                🍰 Desserts
+            </h2>
+
+            <div class="menu-item">
+                <div class="menu-left">
+                    <img src="https://images.unsplash.com/photo-1625943553852-781c6dd46faa">
+                    <div>
+                        <h4>Chocolate Cake</h4>
+                        <p>Soft creamy cake</p>
+                    </div>
+                </div>
+                <div>
+                    <span class="price">₹199</span>
+                    <button class="btn btn-order ms-2">Order</button>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <div class="menu-left">
+                    <img src="https://images.unsplash.com/photo-1559847844-5315695dadae">
+                    <div>
+                        <h4>Donuts</h4>
+                        <p>Sweet chocolate donuts</p>
+                    </div>
+                </div>
+                <div>
+                    <span class="price">₹149</span>
+                    <button class="btn btn-order ms-2">Order</button>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- COOL DRINKS -->
+
+        <div class="menu-box">
+
+            <h2 class="category-title">
+                🥤 Cool Drinks
+            </h2>
+
+            <div class="menu-item">
+                <div class="menu-left">
+                    <img src="https://images.unsplash.com/photo-1551024709-8f23befc6cf7">
+                    <div>
+                        <h4>Sprite</h4>
+                        <p>Cold soft drink</p>
+                    </div>
+                </div>
+                <div>
+                    <span class="price">₹40</span>
+                    <button class="btn btn-order ms-2">Order</button>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <div class="menu-left">
+                    <img src="https://images.unsplash.com/photo-1629203851122-3726ecdf080e">
+                    <div>
+                        <h4>Thums Up</h4>
+                        <p>Cold cola drink</p>
+                    </div>
+                </div>
+                <div>
+                    <span class="price">₹45</span>
+                    <button class="btn btn-order ms-2">Order</button>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ICE CREAMS -->
+
+        <div class="menu-box">
+
+            <h2 class="category-title">
+                🍨 Ice Creams
+            </h2>
+
+            <div class="menu-item">
+                <div class="menu-left">
+                    <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb">
+                    <div>
+                        <h4>Vanilla Ice Cream</h4>
+                        <p>Cold vanilla scoop</p>
+                    </div>
+                </div>
+                <div>
+                    <span class="price">₹99</span>
+                    <button class="btn btn-order ms-2">Order</button>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <div class="menu-left">
+                    <img src="https://images.unsplash.com/photo-1570197788417-0e82375c9371">
+                    <div>
+                        <h4>Chocolate Ice Cream</h4>
+                        <p>Rich chocolate flavor</p>
+                    </div>
+                </div>
+                <div>
+                    <span class="price">₹119</span>
+                    <button class="btn btn-order ms-2">Order</button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+
+    <footer>
+
+        <h3>🍽 Food Paradise</h3>
+
+        <p>
+            Delicious Food | Fast Delivery | Fresh Taste
+        </p>
+
+        <p>
+            © 2026 All Rights Reserved
+        </p>
+
+    </footer>
+
+    <!-- Bootstrap JS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
